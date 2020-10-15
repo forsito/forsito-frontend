@@ -1,0 +1,106 @@
+nav {
+  background-color: #732673 !important;
+  padding: 0px !important;
+  font-family: "Acme", sans-serif;
+  box-shadow: 0px 3px #6a2b77;
+}
+.navbar-brand {
+  color: #fff;
+  padding: 12px;
+  margin-left: 10px;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 800 !important;
+}
+.nav-item {
+  background-color: #732673;
+  color: white;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  padding-right: 15px;
+  padding-left: 15px;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 600;
+  transition: transform 0.5s;
+}
+.nav-item:hover {
+  background-color: #fff;
+  color: #732673 !important;
+  transform: scalex(1.03);
+}
+
+/* navbar toggler button animation */
+.navbar-toggler {
+  --color: #fff;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  margin: 0;
+  margin-right: 20px;
+  outline: none;
+  position: relative;
+  border: none;
+  background: none;
+  cursor: pointer;
+  outline: none !important;
+  -webkit-appearence: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.navbar-toggler svg {
+  width: 40px;
+  height: 40px;
+  top: 0px;
+  left: 0px;
+  stroke: var(--color);
+  stroke-width: 4px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+  display: block;
+  position: absolute;
+}
+
+.navbar-toggler svg path {
+  transition: stroke-dasharray var(--duration, 0.85s) var(--easing, ease)
+      var(--delay, 0s),
+    stroke-dashoffset var(--duration, 0.85s) var(--easing, ease)
+      var(--delay, 0s);
+  stroke-dasharray: var(--array-1, 26px) var(--array-2, 100px);
+  stroke-dashoffset: var(--offset, 126px);
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}
+
+.navbar-toggler svg path:nth-child(2) {
+  --duration: 0.7s;
+  --easing: ease-in;
+  --offset: 100px;
+  --array-2: 74px;
+}
+
+.navbar-toggler svg path:nth-child(3) {
+  --offset: 133px;
+  --array-2: 107px;
+}
+
+.navbar-toggler.active svg path {
+  --offset: 57px;
+}
+
+.navbar-toggler.active svg path:nth-child(1),
+.navbar-toggler.active svg path:nth-child(3) {
+  --delay: 0.15s;
+  --easing: cubic-bezier(0.2, 0.4, 0.2, 1.1);
+}
+
+.navbar-toggler.active svg path:nth-child(2) {
+  --duration: 0.4s;
+  --offset: 2px;
+  --array-1: 1px;
+}
+
+.navbar-toggler.active svg path:nth-child(3) {
+  --offset: 58px;
+}
