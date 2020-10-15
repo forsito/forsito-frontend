@@ -8,27 +8,26 @@
                 <div class="card-body">
                     <form [formGroup]="ContactUs" (ngSubmit)="onSubmit()">
                         <div class="form-group">
-                            <label for="name">Name:</label>
-                            <input type="name" id="name" class="form-control" placeholder="Name"
-                                formControlName="name">
+                            <label for="name"><i class="fas fa-user">&nbsp;</i>Name:</label>
+                            <input type="name" id="name" class="form-control" placeholder="Name" formControlName="name">
                         </div>
                         <div class="form-group">
-                            <label for="email">E-mail:</label>
+                            <label for="email"><i class="far fa-envelope">&nbsp;</i>E-mail:</label>
                             <input type="email" id="email" class="form-control" placeholder="E-mail"
                                 formControlName="email">
                         </div>
                         <div class="form-group">
-                            <label for="mobile">Mobile:</label>
+                            <label for="mobile"><i class="fas fa-mobile">&nbsp;</i>Mobile:</label>
                             <input type="mobile" id="mobile" class="form-control" placeholder="Mobile"
                                 formControlName="mobile">
                         </div>
                         <div class="form-group">
-                            <label for="msg">Message:</label>
+                            <label for="msg"><i class="far fa-sticky-note">&nbsp;</i>Message:</label>
                             <textarea id="msg" cols="30" rows="5" class="form-control" placeholder="Message"
                                 formControlName="msg"></textarea>
                         </div>
                         <div class="form-group">
-                            <button type="submit" class="btn">Submit</button>
+                            <button type="submit" class="btn"><i class="fas fa-check-square">&nbsp;</i>Submit</button>
                         </div>
                     </form>
                 </div>
