@@ -4,6 +4,7 @@ export class Message {
     private email: string,
     private phone: string,
     private message: string,
-    private createdAt: Date
+    private _id?:string,
+    private createdAt?: Date
   ) {}
 }

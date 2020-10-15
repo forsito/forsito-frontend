@@ -5,7 +5,8 @@ export class Project {
     private description: string,
     private type: string,
     private url: string,
-    private createdAt: Date,
+    private _id?:string,
+    private createdAt?: Date,
     private tags?: Tag[],
     private images?: string[],
   ) {}
