@@ -1,0 +1,21 @@
+body{
+    margin-top:20px;
+    background-color:white;
+}
+
+
+.be-comment-block {
+    margin-bottom: 50px !important;
+    border: 3px solid #732673;
+    border-radius: 2px;
+    padding: 50px 70px;
+    border:2px solid #ffffff;
+}
+
+.border-primary{
+    border-color:#732673!important ;
+}
+
+.card-header{
+    background-color:#732673;
+}
