@@ -12,16 +12,17 @@
 
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav ml-auto">
-        <li class="nav-item active">
-          <a class="nav-link" >Home </a>
+        <li class="nav-item" [routerLink]="['/home']" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:
+          true}">
+          <a class="nav-link"  >Home </a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item" [routerLink]="['/crew']" routerLinkActive="active-link" >
           <a class="nav-link" >Crew</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item" [routerLink]="['/projects']" routerLinkActive="active-link">
           <a class="nav-link">Projects</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item" [routerLink]="['/contact-us']">
             <a class="nav-link">Contact Us</a>
           </li>
       </ul>

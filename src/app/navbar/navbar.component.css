@@ -29,6 +29,11 @@ nav {
   color: #732673 !important;
   transform: scalex(1.03);
 }
+.active-link{
+  background-color: #fff;
+  color: #732673 !important;
+  outline: none;
+}
 
 /* navbar toggler button animation */
 .navbar-toggler {

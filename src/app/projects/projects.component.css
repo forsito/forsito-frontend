@@ -14,8 +14,14 @@
   color: #732673;
     }
 
- .btn-primary{
-      color: #732673;
-      border-color:#732673;
+    a{
+      color: #732673 !important;
+      background-color: #fff ;
+      border: 1px solid #732673;
+    }
+    a:hover{
+      color: #fff !important;
       background-color: #732673;
-     }
+    }
+
+     
