@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-navbar',
@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
   dropmenu = false;
+  @ViewChild('close') close:ElementRef;
+
   constructor() {}
   HasPermission = true;
 
@@ -14,5 +16,9 @@ export class NavbarComponent implements OnInit {
 
   drop(e) {
     this.dropmenu = !this.dropmenu;
+  }
+
+  onNavClick(){
+    this.close.nativeElement.click();
   }
 }
