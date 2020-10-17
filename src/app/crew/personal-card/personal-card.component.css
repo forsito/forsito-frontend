@@ -31,16 +31,10 @@ img{
 /* card bot-side  */
 .bot-side{
     height: 200px;
-    padding-top: 150px;
-    text-align: center;
+    padding-top: 50px;
+    text-align: center !important;
     position: relative;
     display: block;
-}
-/* bot side data  */
-.data{
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
 }
 /* visit profile div */
 .visit-profile{
