@@ -16,6 +16,8 @@ import { FeedbacksComponent } from './home/feedbacks/feedbacks.component';
 import { OffersComponent } from './home/offers/offers.component';
 import { HeaderComponent } from './home/header/header.component';
 
+import { HttpClientModule } from '@angular/common/http';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,7 +37,8 @@ import { HeaderComponent } from './home/header/header.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule ,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
