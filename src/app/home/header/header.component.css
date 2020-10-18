@@ -1,7 +1,11 @@
+section{
+  line-height: 1.1;
+}
+
 #HomeHeader {
     position: relative;
     background: url("../../../assets/img/mountains.jpg");
-    min-height: 400px; 
+    height: 400px; 
   }
     #HomeHeader .primary-overlay {
       background: rgba(255 , 250 , 250, 0.4);
@@ -9,11 +13,18 @@
       top: 0;
       left: 0;
       width: 100%;
-      min-height: 400px; 
+      height: 400px; 
     }
+  
+    #HomeHeader .display-1 {
+      font-size: 5.5rem;
+      font-weight: 250;
+      line-height: 1;
+  }
 
   #HomeHeader .lead {
   color: #732673;
+  
     }
 
    #HomeHeader .btn-primary{
