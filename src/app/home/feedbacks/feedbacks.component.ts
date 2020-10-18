@@ -14,8 +14,9 @@ feedbacks:Feedback[];
 
   constructor(private feedbacksService :FeedbackService) { }
 
-  ngOnInit():void {
-    this.feedbacksService.getFeedbacks().subscribe((FeedbackArr) => {
+  ngOnInit():void{
+    this.feedbacksService.getFeedbacks()
+    .subscribe((FeedbackArr) => {
       this.feedbacks = FeedbackArr;
       console.log(this.feedbacks);
     });

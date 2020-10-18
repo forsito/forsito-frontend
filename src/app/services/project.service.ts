@@ -1,10 +1,9 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Project } from '../models/project.model';
+import { domainName } from './domain';
 
-
-
-const domain ='http://localhost:3000/api';
+const domain = domainName ;
 
 @Injectable({
   providedIn: 'root'
