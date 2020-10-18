@@ -8,7 +8,8 @@ import { Crew } from './../models/crew.model';
 export class CrewService {
   constructor(private http: HttpClient) {}
 
-  getAllCrew(){
+  // getting all crew members and returning array of objects all objects of type crew
+  getAllCrew() {
     return this.http.get<Crew[]>('http://localhost:3000/api/crew/getAll');
   }
 }

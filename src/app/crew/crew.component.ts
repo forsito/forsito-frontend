@@ -8,12 +8,14 @@ import { CrewService } from '../services/crew.service';
   styleUrls: ['./crew.component.css'],
 })
 export class CrewComponent implements OnInit {
+  // defined the crew array which recive data get by the service
   crew: Crew[];
+  // define the service to use it
   constructor(private crewService: CrewService) {}
   ngOnInit(): void {
+    // firing the subject to get data from backend
     this.crewService.getAllCrew().subscribe((crewArr) => {
       this.crew = crewArr;
-      console.log(this.crew);
     });
   }
 }
