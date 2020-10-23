@@ -1,3 +1,7 @@
 export class Feedback {
-  constructor(public name: string, public text: string, public _id?: string) {}
+  constructor(
+     public name: string,
+     public text: string,
+     public _id?: string 
+     ) {}
 }

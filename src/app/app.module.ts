@@ -4,7 +4,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
+import { AppComponent } from './app.component';  
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+
+
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
@@ -32,14 +35,18 @@ import { HeaderComponent } from './home/header/header.component';
     OffersComponent,
     HeaderComponent,
   ],
+
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    NgbModule,
   ],
+
   providers: [],
   bootstrap: [AppComponent],
 })
+
 export class AppModule {}
