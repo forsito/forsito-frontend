@@ -1,4 +1,12 @@
 <div class="container">
+    <!-- <ngx-spinner
+  bdColor="rgba(255,255,255,0.8)"
+  size="medium"
+  color="#732673"
+  type="square-jelly-box"
+>
+  <p style="font-size: 20px; color: #732673">Loading...</p>
+</ngx-spinner> -->
     <!-- made the counter make only the odd numbers to and used ng container to put the condition it doesn't affect on the style  -->
     <div class="row justify-content-center" *ngFor="let crewmate of crew;let i=index">
         <ng-container *ngIf="i%2 == 0">

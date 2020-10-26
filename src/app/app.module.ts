@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { NgxSpinnerModule } from 'ngx-spinner';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,6 +17,10 @@ import { HomeComponent } from './home/home.component';
 import { FeedbacksComponent } from './home/feedbacks/feedbacks.component';
 import { OffersComponent } from './home/offers/offers.component';
 import { HeaderComponent } from './home/header/header.component';
+import { ProfileComponent } from './profile/profile.component';
+import { StartingPageComponent } from './profile/starting-page/starting-page.component';
+import { BasicInfoComponent } from './profile/basic-info/basic-info.component';
+import { UserProjectsComponent } from './profile/user-projects/user-projects.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +36,10 @@ import { HeaderComponent } from './home/header/header.component';
     FeedbacksComponent,
     OffersComponent,
     HeaderComponent,
+    ProfileComponent,
+    StartingPageComponent,
+    BasicInfoComponent,
+    UserProjectsComponent,
   ],
   imports: [
     BrowserModule,
@@ -38,6 +47,7 @@ import { HeaderComponent } from './home/header/header.component';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    NgxSpinnerModule
   ],
   providers: [],
   bootstrap: [AppComponent],

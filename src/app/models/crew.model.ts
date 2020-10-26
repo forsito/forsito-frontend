@@ -2,12 +2,13 @@ import { Project } from './project.model';
 
 export class Crew {
   constructor(
-    private name: string,
-    private title: string,
-    private _id?:string,
-    private image?: string,
-    private bio?: string,
-    private permission?: number,
-    private projects?: Project[]
+    public name: string,
+    public title: string,
+    public _id?: string,
+    public image?: string,
+    public bio?: string,
+    public permission?: number,
+    public projects?: Project[],
+    public createdAt?: Date
   ) {}
 }

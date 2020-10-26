@@ -23,7 +23,7 @@ export class ContactUsComponent implements OnInit {
   }
   // tslint:disable-next-line: typedef
   onSubmit() {
-    // submitting the form and post the msg to the db 
+    // submitting the form and post the msg to the db
     const contactForm = this.ContactUs.value;
     // use constructor to post data as it doesn't work when submitting with the form value directly
     const msg = new Message(
@@ -32,8 +32,26 @@ export class ContactUsComponent implements OnInit {
       contactForm.phone,
       contactForm.message
     );
-    this.msgService.PostMessage(msg).subscribe((response) => {
-      console.log(response);
-    });
+    this.msgService
+      .PostMessage(msg)
+      .toPromise()
+      .then((response) => {
+        console.log(response);
+        this.ContactUs.setValue({
+          name: null,
+          email: null,
+          phone: null,
+          message: null,
+        });
+      })
+      .catch((err) => {
+        // console.log(...err.error.data);
+        err.error.data.forEach((elementErr) => {
+          console.log(elementErr.param, elementErr.value, elementErr.msg);
+          // tslint:disable-next-line: triple-equals
+          if (elementErr.value == null || elementErr.value == '') {
+          }
+        });
+      });
   }
 }
