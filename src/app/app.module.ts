@@ -5,7 +5,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgxSpinnerModule } from 'ngx-spinner';
 
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
+import { AppComponent } from './app.component';  
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+
+
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
@@ -41,15 +44,19 @@ import { UserProjectsComponent } from './profile/user-projects/user-projects.com
     BasicInfoComponent,
     UserProjectsComponent,
   ],
+
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
+    NgxSpinnerModule,
+    NgbModule,
     HttpClientModule,
-    NgxSpinnerModule
-  ],
+ ],
+
   providers: [],
   bootstrap: [AppComponent],
 })
+
 export class AppModule {}
