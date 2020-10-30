@@ -4,10 +4,14 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { NgxSpinnerModule } from 'ngx-spinner';
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';  
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+// ngx toaster
+import { CommonModule } from '@angular/common';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
 
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
@@ -53,10 +57,17 @@ import { UserProjectsComponent } from './profile/user-projects/user-projects.com
     NgxSpinnerModule,
     NgbModule,
     HttpClientModule,
- ],
+    CommonModule,
+    BrowserAnimationsModule, // required animations module
+    ToastrModule.forRoot({
+      maxOpened: 4,
+      autoDismiss: true,
+      newestOnTop: true,
+      timeOut: 3000,
+    }), // ToastrModule added
+  ],
 
   providers: [],
   bootstrap: [AppComponent],
 })
-
 export class AppModule {}

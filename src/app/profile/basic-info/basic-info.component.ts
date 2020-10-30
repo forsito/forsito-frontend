@@ -19,7 +19,6 @@ export class BasicInfoComponent implements OnInit {
   ngOnInit(): void {
     // getting id from url
     this.id = this.route.snapshot.parent.params.id;
-    console.log(this.id);
     // getting user
     this.crewService.getUserByID(this.id).subscribe((user: Crew) => {
       this.user = user;
