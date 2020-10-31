@@ -49,11 +49,11 @@ export class ProjectsComponent implements OnInit {
 
  onClick(id:string):void{
    //take the id from project.id then fetch it from server 
-  this. project_clicked_id = id;
+   this. project_clicked_id = id;
    this.projectService.getProject(this. project_clicked_id)
       .subscribe((spec_project) => {
        this.project_details = spec_project ;
    });
   }
-  
+
 }

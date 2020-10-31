@@ -8,6 +8,7 @@ const domain = domainName;
 @Injectable({
   providedIn: 'root',
 })
+
 export class ProjectService {
   constructor(private http: HttpClient) {}
 
