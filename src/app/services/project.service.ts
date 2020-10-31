@@ -17,7 +17,7 @@ getProjects(){
 }
 
 getProject(ProjectId : string){
-  return this.http.get<Project[]>(`${domain}/Projects/${ProjectId}get`);
+  return this.http.get<Project>(`${domain}/Projects/${ProjectId}/get`);
  }
 
 }

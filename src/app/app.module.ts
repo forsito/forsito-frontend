@@ -12,7 +12,6 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { ProjectsComponent } from './projects/projects.component';
-import { ProjectDetailsComponent } from './projects/project-details/project-details.component';
 import { CrewComponent } from './crew/crew.component';
 import { PersonalCardComponent } from './crew/personal-card/personal-card.component';
 import { HomeComponent } from './home/home.component';
@@ -27,7 +26,6 @@ import { HeaderComponent } from './home/header/header.component';
     FooterComponent,
     ContactUsComponent,
     ProjectsComponent,
-    ProjectDetailsComponent,
     CrewComponent,
     PersonalCardComponent,
     HomeComponent,

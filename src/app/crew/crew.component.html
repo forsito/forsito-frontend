@@ -1,4 +1,18 @@
-<div class="container">
+<header id="crew-header" class="">
+    <div class="container primary-overlay">
+      <div class="row">
+        <div class="col col-md-12 mb-5"></div>
+        <div class=" col-md-12  text-center lead mb-5">
+          <h1 class="d-inline-block text-center">Our Crew</h1>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+
+
+<div class="container mt-3">
     <!-- made the counter make only the odd numbers to and used ng container to put the condition it doesn't affect on the style  -->
     <div class="row justify-content-center" *ngFor="let crewmate of crew;let i=index">
         <ng-container *ngIf="i%2 == 0">

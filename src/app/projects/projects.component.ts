@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ProjectService } from '../services/project.service';
 import { Project } from '../models/project.model';
-import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
+import { NgbModal , ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-projects',
@@ -12,10 +12,13 @@ import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
 
 export class ProjectsComponent implements OnInit {
   
-  projects:Project[];
-  closeResult: string;
+  project_clicked_id: string ;
+  project_details :Project;
 
-  constructor(private projectService : ProjectService ,
+  projects : Project[];
+  closeResult : string;
+
+  constructor( private projectService : ProjectService ,
                private modalService: NgbModal) { }
 
   ngOnInit(): void{
@@ -24,6 +27,7 @@ export class ProjectsComponent implements OnInit {
       this.projects = projectArr;
     });
   }
+
   open(content) {
     this.modalService.open(content, {ariaLabelledBy: 'modal-basic-title' ,   size: 'lg' }).result.then((result) => {
       this.closeResult = `Closed with: ${result}`;
@@ -42,6 +46,14 @@ export class ProjectsComponent implements OnInit {
     }
   }
 
+ onClick(id:string):void{
+   //take the id from project.id then fetch it from server 
+  this. project_clicked_id = id;
+   this.projectService.getProject(this. project_clicked_id)
+      .subscribe((spec_project) => {
+       this.project_details = spec_project ;
+   });
+  }
+
+
 }
-
-
