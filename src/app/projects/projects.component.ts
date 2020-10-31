@@ -6,10 +6,8 @@ import { NgbModal , ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
 @Component({
   selector: 'app-projects',
   templateUrl: './projects.component.html',
-  styleUrls: ['./projects.component.css']
+  styleUrls: ['./projects.component.css'],
 })
-
-
 export class ProjectsComponent implements OnInit {
   
   project_clicked_id: string ;
@@ -21,28 +19,31 @@ export class ProjectsComponent implements OnInit {
   constructor( private projectService : ProjectService ,
                private modalService: NgbModal) { }
 
-  ngOnInit(): void{
-    this.projectService.getProjects()
-      .subscribe((projectArr) => {
+  ngOnInit(): void {
+    this.projectService.getProjects().subscribe((projectArr) => {
       this.projects = projectArr;
     });
   }
-
   open(content) {
-    this.modalService.open(content, {ariaLabelledBy: 'modal-basic-title' ,   size: 'lg' }).result.then((result) => {
-      this.closeResult = `Closed with: ${result}`;
-    }, (reason) => {
-      this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
-    });
+    this.modalService
+      .open(content, { ariaLabelledBy: 'modal-basic-title', size: 'lg' })
+      .result.then(
+        (result) => {
+          this.closeResult = `Closed with: ${result}`;
+        },
+        (reason) => {
+          this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
+        }
+      );
   }
-  
+
   private getDismissReason(reason: any): string {
     if (reason === ModalDismissReasons.ESC) {
       return 'by pressing ESC';
     } else if (reason === ModalDismissReasons.BACKDROP_CLICK) {
       return 'by clicking on a backdrop';
     } else {
-      return  `with: ${reason}`;
+      return `with: ${reason}`;
     }
   }
 
@@ -54,6 +55,5 @@ export class ProjectsComponent implements OnInit {
        this.project_details = spec_project ;
    });
   }
-
-
+  
 }
