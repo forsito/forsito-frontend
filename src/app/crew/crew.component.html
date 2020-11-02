@@ -1,4 +1,6 @@
-<header id="crew-header" class="">
+<main class="fullHeight">
+
+  <header id="crew-header" class="">
     <div class="container primary-overlay">
       <div class="row">
         <div class="col col-md-12 mb-5"></div>
@@ -12,25 +14,25 @@
 
 
 
-<div class="container mt-3">
-<div class="container">
+  <div class="container">
     <!-- <ngx-spinner
-  bdColor="rgba(255,255,255,0.8)"
-  size="medium"
-  color="#732673"
-  type="square-jelly-box"
->
-  <p style="font-size: 20px; color: #732673">Loading...</p>
-</ngx-spinner> -->
+      bdColor="rgba(255,255,255,0.8)"
+      size="medium"
+      color="#732673"
+      type="square-jelly-box"
+      >
+      <p style="font-size: 20px; color: #732673">Loading...</p>
+    </ngx-spinner> -->
     <!-- made the counter make only the odd numbers to and used ng container to put the condition it doesn't affect on the style  -->
     <div class="row justify-content-center" *ngFor="let crewmate of crew;let i=index">
-        <ng-container *ngIf="i%2 == 0">
-        <div class="col-md-4" >
-            <app-personal-card [crewmate]=crew[i] ></app-personal-card>
+      <ng-container *ngIf="i%2 == 0">
+        <div class="col-md-4">
+          <app-personal-card [crewmate]=crew[i]></app-personal-card>
         </div>
         <div class=" col-md-4 offset-md-1" *ngIf="crewmate!=null">
-            <app-personal-card [crewmate]=crew[i+1]></app-personal-card>
+          <app-personal-card [crewmate]=crew[i+1]></app-personal-card>
         </div>
-    </ng-container>
+      </ng-container>
     </div>
-</div>
+  </div>
+</main>
