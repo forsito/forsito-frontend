@@ -9,7 +9,7 @@
 
 
 <ng-template #mymodal let-modal class="py-3">
-    <div class="modal-content">
+    <div *ngIf="project_details" class="modal-content">
 
         <div class="modal-header bg-primary text-white">
             <h2> {{ project_details.title }} </h2>
