@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ProjectService } from '../services/project.service';
 import { Project } from '../models/project.model';
-import { NgbModal , ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
+import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-projects',
@@ -9,21 +9,25 @@ import { NgbModal , ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
   styleUrls: ['./projects.component.css'],
 })
 export class ProjectsComponent implements OnInit {
-  
-  project_clicked_id: string ;
-  project_details :Project;
+  // tslint:disable-next-line: variable-name
+  project_clicked_id: string;
+  // tslint:disable-next-line: variable-name
+  project_details: Project;
 
-  projects : Project[];
-  closeResult : string;
+  projects: Project[];
+  closeResult: string;
 
-  constructor( private projectService : ProjectService ,
-               private modalService: NgbModal) { }
+  constructor(
+    private projectService: ProjectService,
+    private modalService: NgbModal
+  ) {}
 
   ngOnInit(): void {
     this.projectService.getProjects().subscribe((projectArr) => {
       this.projects = projectArr;
     });
   }
+  // tslint:disable-next-line: typedef
   open(content) {
     this.modalService
       .open(content, { ariaLabelledBy: 'modal-basic-title', size: 'lg' })
@@ -47,13 +51,14 @@ export class ProjectsComponent implements OnInit {
     }
   }
 
- onClick(id:string):void{
-   //take the id from project.id then fetch it from server 
-   this. project_clicked_id = id;
-   this.projectService.getProject(this. project_clicked_id)
+  onClick(id: string): void {
+  // take the id from project.id then fetch it from server
+    this.project_clicked_id = id;
+    this.projectService
+      .getProject(this.project_clicked_id)
+      // tslint:disable-next-line: variable-name
       .subscribe((spec_project) => {
-       this.project_details = spec_project ;
-   });
+        this.project_details = spec_project;
+      });
   }
-
 }

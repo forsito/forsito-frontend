@@ -8,7 +8,7 @@ export class Crew {
     public image?: string,
     public bio?: string,
     public permission?: number,
-    public projects?: string[],
+    public projects?: { _id: string; title: string }[],
     public createdAt?: Date
   ) {}
 }
