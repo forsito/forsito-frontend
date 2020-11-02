@@ -7,6 +7,12 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class PersonalCardComponent implements OnInit {
   constructor() {}
-  @Input() crewmate: { image: string, name: string, title: string, bio: string };
+  @Input() crewmate: {
+    image: string;
+    name: string;
+    title: string;
+    bio: string;
+    _id: string;
+  };
   ngOnInit(): void {}
 }

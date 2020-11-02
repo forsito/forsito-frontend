@@ -19,6 +19,9 @@ export class NavbarComponent implements OnInit {
   }
 
   onNavClick(){
-    this.close.nativeElement.click();
+    const collapse = document.getElementById('navbarNavDropdown');
+    const show=collapse.classList.contains('show');
+    
+    if(show) this.close.nativeElement.click();
   }
 }

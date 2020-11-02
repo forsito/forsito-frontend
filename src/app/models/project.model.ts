@@ -1,13 +1,16 @@
 import { Tag } from './tag.model';
 export class Project {
   constructor(
-    private title: string,
-    private description: string,
-    private type: string,
-    private url: string,
-    private _id?:string,
-    private createdAt?: Date,
-    private tags?: Tag[],
-    private images?: string[],
+    public title: string,
+    public description: string,
+    public type: string,
+    public url: string,
+    public _id?:string,
+    public createdAt?: Date,
+    public tags?: Tag[],
+    public images?: string[]
   ) {}
 }
+
+
+

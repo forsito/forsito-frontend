@@ -1,3 +1,19 @@
+.main {
+  margin: 10px;
+  padding: 10px;
+}
+h3 {
+  color: #732673;
+  text-shadow: 1px 1px #541a55;
+}
+span {
+  color: #732673;
+  font-size: 20px;
+  display: block;
+  margin: 5px;
+  cursor: pointer;
+}
+
 #page-header {
   background: url(/../../assets/img/mountains.jpg);
   min-height: 120px;
@@ -29,4 +45,8 @@ a:hover {
 .close > span {
   color: white;
   outline: white;
+}
+.img-fluid{
+  max-width: 100%;
+  height: auto;
 }

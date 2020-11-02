@@ -11,11 +11,11 @@
                     <div class="data">
                         <h4>{{crewmate.name}}</h4>
                         <h5>{{crewmate.title}}</h5>
-                        <p>{{crewmate.bio}}</p>
+                        <p [innerHTML]="crewmate.bio"></p>
                     </div>
                 </div>
                 <div class="visit-profile">
-                    <button class="btn">View Profile</button>
+                    <button class="btn" routerLink="/profile/{{crewmate._id}}" >View Profile</button>
                 </div>
             </div>
         </div>

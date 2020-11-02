@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card" *ngIf="user">
+                <div class="card-body">
+                    <div class="top-side">
+                        <img src="{{user.image}}" class="img-thumbnail"
+                            alt="profile picture">
+                        <h3>{{user.name}}</h3>
+                        <h4>{{user.title}}</h4>
+                    </div>
+                    <div class="bot-side">
+                        <div class="list-group">
+                            <div class="list-group-item" [routerLink]="['basic-info']" routerLinkActive="active-link"
+                                [routerLinkActiveOptions]="{exact:
+                                true}">Basic Info</div>
+                            <div class="list-group-item" [routerLink]="['user-projects']"
+                                routerLinkActive="active-link">Projects</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>

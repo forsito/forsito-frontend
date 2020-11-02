@@ -1,85 +1,125 @@
+<main class="fullHeight">
 
 
-<!-- PAGE HEADER -->
-<header id="page-header" class="">
-  <div class="container primary-overlay">
-    <div class="row">
-      <div class="col col-md-12 mb-5"></div>
-      <div class=" col-md-12  text-center lead mb-5">
-        <h1 class="d-inline-block text-center">Our Projects</h1>
-      </div>
-    </div>
-  </div>
-</header>
-
-<!-- projects section -->
-<section id="project" class="py-3 text-dark bg-white ">
-  <div class="container">
-    <div class="row">
-      <div class="col ">
-        <div class="card-columns">
-          <div class="card">
-            <img src ="/../../assets/img/mountains.jpg" alt="" class="img-fluid card-img-top">
-            <div class="card-body">
-              <h4 class="card-title">Project One</h4>
-              <small class="text-muted">Type on 05/20</small>
-              <a class="btn ml-5 ">
-                <i class="fas fa-arrow-right"></i> View more
-              </a>
-              <hr>
-              <p class="card-text text-dark">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla facilis, sequi excepturi, quisquam, dignissimos
-                molestiae dicta dolore dolores quas vel sunt placeat tempora expedita suscipit. Magni vel iusto mollitia
-                exercitationem.
-              </p>
-            </div>
-          </div>
-
-
-          <div class="card">
-            <img src ="/../../assets/img/mountains.jpg"  alt="" class="img-fluid card-img-top">
-            <div class="card-body">
-              <h4 class="card-title">Project Two</h4>
-              <small class="text-muted">Type on 05/22</small>
-                <a href="#" class="btn btn-outline-secondary ml-5">
-                <i class="fas fa-arrow-right"></i>  view more..
-                </a> 
-              <hr>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla facilis, sequi excepturi, quisquam, dignissimos
-                molestiae dicta dolore dolores quas vel sunt placeat tempora expedita suscipit. Magni vel iusto mollitia
-                exercitationem.
-              </p>
-            </div>
-          </div>
-
-
-          <div class="card">
-            <img src ="/../../assets/img/mountains.jpg"  alt="" class="img-fluid card-img-top">
-            <div class="card-body">
-              <h4 class="card-title">Project Three</h4>
-              <small class="text-muted">Type on 05/23</small>
-                <a href="#" class="btn btn-outline-secondary ml-5">
-                <i class="fas fa-arrow-right"></i>  view more..
-              </a>
-              <hr>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla facilis, sequi excepturi, quisquam, dignissimos
-                molestiae dicta dolore dolores quas vel sunt placeat tempora expedita suscipit. Magni vel iusto mollitia
-                exercitationem.
-              </p>
-            </div>
-          </div>
-
-
+  <!-- PAGE HEADER -->
+  <header id="page-header" class="">
+    <div class="container primary-overlay">
+      <div class="row">
+        <div class="col col-md-12 mb-5"></div>
+        <div class=" col-md-12  text-center lead mb-5">
+          <h1 class="d-inline-block text-center">Our Projects</h1>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </header>
 
 
-<app-project-details></app-project-details>
+  <!-- projects section -->
+  <section id="project" class="py-3 text-dark bg-white ">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-md-4 mb-4" *ngFor="let project of projects">
+
+          <div class="card">
+            <img src="/../../assets/img/mountains.jpg" alt="" class="img-fluid card-img-top">
+            <div class="card-body">
+              <h4 class="card-title"> {{ project.title }} </h4>
+              <small class="text-muted"> {{ project.type }} </small>
+              <a class="btn btn-primary text-white ml-5" (click)="open(mymodal) ; onClick(project._id) ;">
+                <i class="fas fa-arrow-right"></i> View more
+              </a>
+              <hr>
+              <p class="card-text text-dark">{{ project.description }}
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </section>
 
 
- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
- crossorigin="anonymous">
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
- crossorigin="anonymous">
+
+  <ng-template #mymodal let-modal class="py-3">
+    <div *ngIf="project_details" class="modal-content">
+
+      <div class="modal-header bg-primary text-white">
+        <h2> {{ project_details.title }} </h2>
+        <button class="close" data-dismiss="modal" (click)="modal.dismiss('Cross click')">
+          <span>&times;</span>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <section id="explore-section" class="bg-light text-muted pt-5">
+          <div class="container">
+            <div class="row">
+
+              <div class="col-md-4">
+                <img src="/../../assets/img/mountains.jpg" alt="" class="img-fluid mb-3 rounded-circle">
+              </div>
+
+              <div class="col-md-8">
+                <div class="row">
+                  <div class="col-md-8">
+                    <h2 class="text-center">{{ project_details.title }}</h2>
+                  </div>
+                  <a href="project_details.url" class="btn mb-3">
+                    <i class="fas fa-arrow-right"></i> View demo
+                  </a>
+                </div>
+
+                <p>{{ project_details.description }}</p>
+
+                <br>
+
+                <!-- tags of project -->
+
+                <section id="gallery" class="py-2">
+                  <div class="container">
+                    <h4 class="text-center text-dark">Technology</h4>
+                    <div class="row mb-4">
+
+                      <div class="col-md-4 col-sm-4" *ngFor="let pd of project_details.tags">
+                        <div class="row">
+                          <div class="col-md-8 col-sm-8">
+                            <img src="{{ pd.iconPath }}" alt="" class="img-fluid">
+                            <!-- <h5 class="lead"> {{ pd.name }}</h5>  -->
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </section>
+
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="gallery" class="py-2">
+          <div class="container">
+            <h3 class="text-center">Website Gallery</h3>
+            <div class="row mb-4">
+              <div class="col-md-4" *ngFor="let web_image of project_details.images">
+                <img src="{{ web_image }}" alt="" class="img-fluid">
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div class="modal-footer">
+        <button href="" class="btn mb-3" (click)="modal.dismiss('Cross click')" style="background-color:#732673 ;">
+          Close
+        </button>
+      </div>
+
+    </div>
+  </ng-template>
+
+</main>

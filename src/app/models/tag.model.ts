@@ -1,3 +1,8 @@
 export class Tag {
-  constructor(private name: string, private iconPath: string,private _id?:string) {}
+  constructor(
+     name: string , 
+     iconPath: string,
+    _id?:string
+    
+    ) {}
 }

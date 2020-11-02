@@ -1,12 +1,32 @@
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-6 col-sm-12 col-xs-12">
-            <div class="card">
-                <div class="card-header">
-                    <h4>Contact Us</h4>
-                </div>
-                <div class="card-body">
-                    <form [formGroup]="ContactUs" (ngSubmit)="onSubmit()">
+  <!-- CONTACT SECTION -->
+  <section id="contact" class="py-3">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-md-4">
+
+          <div class="card p-4">
+            <div class="card-body">
+              <h4>Get In Touch</h4>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, odio!</p>
+              <h4>Address</h4>
+              <p>550 Main st, Boston MA</p>
+              <h4>Email</h4>
+              <p>test@test.com</p>
+              <h4>Phone</h4>
+              <p>(555) 555-5555</p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="col-md-8">
+
+          <div class="card p-4">
+            <div class="card-body ">
+              <h3 class="text-center">Please fill out this form to contact us</h3>
+              <hr>
+              <form [formGroup]="ContactUs" (ngSubmit)="onSubmit()">
                         <div class="form-group">
                             <label for="name"><i class="fas fa-user">&nbsp;</i>Name:</label>
                             <input type="name" id="name" class="form-control" placeholder="Name" formControlName="name">
@@ -17,21 +37,24 @@
                                 formControlName="email">
                         </div>
                         <div class="form-group">
-                            <label for="mobile"><i class="fas fa-mobile">&nbsp;</i>Mobile:</label>
-                            <input type="mobile" id="mobile" class="form-control" placeholder="Mobile"
-                                formControlName="mobile">
+                            <label for="phone"><i class="fas fa-mobile">&nbsp;</i>phone:</label>
+                            <input type="phone" id="phone" class="form-control" placeholder="phone"
+                                formControlName="phone">
                         </div>
                         <div class="form-group">
                             <label for="msg"><i class="far fa-sticky-note">&nbsp;</i>Message:</label>
-                            <textarea id="msg" cols="30" rows="5" class="form-control" placeholder="Message"
-                                formControlName="msg"></textarea>
+                            <textarea id="message" cols="30" rows="5" class="form-control" placeholder="Message"
+                                formControlName="message"></textarea>
                         </div>
                         <div class="form-group">
-                            <button type="submit" class="btn"><i class="fas fa-check-square">&nbsp;</i>Submit</button>
+                            <button type="submit" class="btn btn-block mt-4 mb-4"><i class="fas fa-check-square">&nbsp;</i>Submit</button>
                         </div>
                     </form>
-                </div>
+              </div>
             </div>
+          </div>
         </div>
-    </div>
-</div>
+      </div>
+
+  </section>
+
