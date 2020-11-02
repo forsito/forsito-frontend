@@ -22,7 +22,7 @@ export class CrewComponent implements OnInit {
     // firing the subject to get data from backend
     this.crewService.getAllCrew().subscribe((crewArr) => {
       this.crew = crewArr;
-      console.log(crewArr);
+      // console.log(crewArr);
       // this.spinner.hide();
     });
   }

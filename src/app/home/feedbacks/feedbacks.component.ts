@@ -18,7 +18,7 @@ feedbacks:Feedback[];
     this.feedbacksService.getFeedbacks()
     .subscribe((FeedbackArr) => {
       this.feedbacks = FeedbackArr;
-      console.log(this.feedbacks);
+      // console.log(this.feedbacks);
     });
   }
 }
