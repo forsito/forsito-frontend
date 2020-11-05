@@ -27,6 +27,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { StartingPageComponent } from './profile/starting-page/starting-page.component';
 import { BasicInfoComponent } from './profile/basic-info/basic-info.component';
 import { UserProjectsComponent } from './profile/user-projects/user-projects.component';
+import { ProjectDetailsModalComponent } from './projects/project-details-modal/project-details-modal.component';
 
 @NgModule({
   declarations: [
@@ -45,6 +46,7 @@ import { UserProjectsComponent } from './profile/user-projects/user-projects.com
     StartingPageComponent,
     BasicInfoComponent,
     UserProjectsComponent,
+    ProjectDetailsModalComponent,
   ],
 
   imports: [

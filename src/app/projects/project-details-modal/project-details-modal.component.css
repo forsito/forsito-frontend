@@ -1,0 +1,22 @@
+
+a {
+    color: #732673 !important;
+    background-color: #fff;
+    border: 1px solid #732673;
+  }
+  a:hover {
+    color: #fff !important;
+    background-color: #732673;
+  }
+  
+  .bg-primary {
+    background-color: #732673 !important;
+  }
+  .btn,
+  .close > span {
+    color: white;
+    outline: white;
+  }
+.close{
+        outline: none;
+}

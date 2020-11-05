@@ -30,3 +30,6 @@ a:hover {
   color: white;
   outline: white;
 }
+.close{
+  outline: none;
+}
