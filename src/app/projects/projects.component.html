@@ -25,7 +25,7 @@
             <div class="card-body">
               <h4 class="card-title"> {{ project.title }} </h4>
               <small class="text-muted"> {{ project.type }} </small>
-              <a class="btn btn-primary text-white ml-5" (click)="open(mymodal) ; onClick(project._id) ;">
+              <a class="btn btn-primary text-white ml-5" (click)="onClick(project._id) ;">
                 <i class="fas fa-arrow-right"></i> View more
               </a>
               <hr>
@@ -39,32 +39,15 @@
     </div>
 
   </section>
+<app-project-details-modal></app-project-details-modal>
 
-<!-- the modal of project -->
-<ng-template  let-modal #mymodal class="py-3">
-  <div *ngIf="project_details" class="modal-content">
-
-    <div class="modal-header bg-primary text-white">
-      <h2> {{ project_details.title }} </h2>
-      <button class="close" data-dismiss="modal" (click)=" modal.dismiss('Cross click')">
-        <span>&times;</span>
-      </button>
-
-    </div>
-
-<!-- the body of Modal -->
-<app-project-details-modal
-[project_details] ='project_details'
+<ngx-spinner
+bdColor="rgba(0,0,0,0)"
+size="medium"
+color="#732673"
+type="square-jelly-box"
 >
-</app-project-details-modal>
-
-<div class="modal-footer">
-  <button href="" class="btn mb-3" (click)="modal.dismiss('Cross click')" style="background-color:#732673 ;">
-    Close
-  </button>
-</div>
-
-</div>
-</ng-template>
+<p style="font-size: 20px; color: #732673">Loading...</p>
+</ngx-spinner>
 
 </main>

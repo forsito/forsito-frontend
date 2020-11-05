@@ -18,11 +18,11 @@ export class CrewComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    // this.spinner.show();
+    this.spinner.show();
     // firing the subject to get data from backend
     this.crewService.getAllCrew().subscribe((crewArr) => {
       this.crew = crewArr;
-      // this.spinner.hide();
+      this.spinner.hide();
     });
   }
 }
