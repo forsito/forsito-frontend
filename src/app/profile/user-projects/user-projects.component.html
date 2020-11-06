@@ -2,8 +2,13 @@
     <div class="col-md-12">
         <h3>Projects</h3>
         <hr>
-        <span *ngFor="let project of userProjects; let i = index"
-            (click)="onClick(project._id) ;">{{i+1}}.&nbsp;{{project.title}} </span>
+        <ng-container *ngIf="length == 0">
+            <h4>No projects Yet</h4>
+        </ng-container>
+        <ng-container *ngIf="length != 0">
+            <span *ngFor="let project of userProjects; let i = index"
+                (click)="onClick(project._id) ;">{{i+1}}.&nbsp;{{project.title}} </span>
+        </ng-container>
     </div>
 </div>
 

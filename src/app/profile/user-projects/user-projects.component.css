@@ -6,7 +6,7 @@ h3 {
   color: #732673;
   text-shadow: 1px 1px #541a55;
 }
-span {
+span,h4 {
   color: #732673;
   font-size: 20px;
   display: block;
